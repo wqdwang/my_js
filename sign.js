@@ -38,11 +38,11 @@
   }
   
   function showmsg() {
-    const signCode = $.sign.status.code
-    const result = signCode === 0 ? '成功' : signCode === 1021 ? '重复' : '失败'
+    const signCode = $.sign.IsCheckInSuccess
+    const result = signCode === true ? '成功' : '失败'
     $.subt = `签到: ${result}`
-    $.desc = `说明: ${$.sign.status.message}`
-    $.msg($.name, $.subt, $.desc)
+    $.desc = `说明: ${$.sign.Message}`
+    $.msg('tiny', $.subt, $.desc)
   }
   
   // prettier-ignore
