@@ -38,7 +38,7 @@
       .post(url)
       .then((resp) => {
         console.log('到底成没成功啊')
-        console.log(resp)
+        console.log(resp.statusCode)
         $.sign = JSON.parse(resp)
       })
       .catch((err) => console.log(err))
