@@ -6,12 +6,8 @@ const hdl = init()
 
 let isGetCookie = typeof $request !== 'undefined'
 
-if (isGetCookie) {
    getcookie()
-} else {
-   sign()
-}
-
+//    sign()
 function getcookie() {
   if ($request && $request.method == 'POST') {
       const signurlVal = $request.url
