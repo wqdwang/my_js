@@ -1,3 +1,4 @@
+const chavy = init()
 sign()
 
 function sign() {
