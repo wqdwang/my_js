@@ -23,6 +23,8 @@
               Cookie: 'AttendanceLoginInfo={"EmployeeNo":"P0153164","Token":"v9WwvB99E2f4YNO72QYc3zXpBkE="}; __RequestVerificationToken_L0xhblhpbg2=W48yGUzrd9GziYkuOaERQC3_bC_ZIMNWJ3YkGZxUWdr-fX-pr-NR3l19j1BdpDi8Jbd4nGh4NGv1sMmUVGezup-4oJIoTcH_kFK0LIlLNalIYXcd0h2Qw2l1o3P8qRoh_Imvv0Cbau6GVd39seUrdA2; App_Token=46f0246d-d8d7-4525-8aa4-40f007032e7b; User_Token=7d817d64-9c47-40ca-ad77-85ab1b2501e0; currentuser=P0153164'
             }
     }
+    url.headers['X-Requested-With'] = 'XMLHttpRequest'
+    url.headers['Content-Type'] = 'application/x-www-form-urlencoded'
     url.headers['Origin'] = 'https://attendanceserviceapi.pactera.com:8099'
   url.headers['Referer'] = 'https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/Index'
   url.headers['Accept'] = 'application/json, text/javascript, */*; q=0.01'
