@@ -6,7 +6,7 @@ let cookieVal = null
 let bodyVal = ``
 
 if ($request.body) {
-  cookieVal = JSON.stringify($request.headers)
+  cookieVal = $request.headers)
   bodyVal = bodyVal ? bodyVal : $request.body
 } else {
   // ([^:]*):\s(.*)\n?
