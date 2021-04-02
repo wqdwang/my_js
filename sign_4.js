@@ -2,7 +2,7 @@ const cookieName = '网易新闻'
 const cookieKey = 'chavy_cookie_neteasenews'
 const bodyKey = 'chavy_body_neteasenews'
 const chavy = init()
-const cookieVal = JSON.parse(chavy.getdata(cookieKey))
+const cookieVal = chavy.getdata(cookieKey)
 const bodyVal = chavy.getdata(bodyKey)
 
 sign()
