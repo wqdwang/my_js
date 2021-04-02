@@ -12,7 +12,7 @@ function sign() {
   url.headers['Accept'] = 'application/json, text/javascript, */*; q=0.01'
   url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 es360messenger/7.22.30-796 clientType/phone'
 
-  chavy.post(url, (error, response, data) => {
+  chavy.get(url, (error, response, data) => {
     let result = JSON.parse(data)
     let title = `tiny`
     // 签到成功
