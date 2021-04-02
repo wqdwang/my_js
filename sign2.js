@@ -29,11 +29,11 @@
   url.headers['Referer'] = 'https://attendanceserviceapi.pactera.com:8099/LanXin/zh-cn/GPS/Index'
   url.headers['Accept'] = 'application/json, text/javascript, */*; q=0.01'
   url.headers['User-Agent'] = 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_1_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 es360messenger/7.22.30-796 clientType/phone'
-  url.body = {
+  url.body = JSON.stringify({
       "longitude":112.952129,
       "latitude":28.227944,
       "__RequestVerificationToken":"K_c2emv_Eci7I5Q7PqFMkgRtR2IFRSScPaUshRhCeWbR99TRyKe3oetCUCwZrDQ2oQslC9qHZY9c-0oORxtyps6_O7PiFMea1W3SE0KYV2GZe3EDwfkk1ksmSiEFN9sE_77CyIzD1DkztV6vrTKAOupJWAAKv-w6-gGAxVCbJA41"
-  }
+  })
     return $.http
       .post(url)
       .then((resp) => {
