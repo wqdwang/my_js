@@ -37,8 +37,9 @@
     return $.http
       .post(url)
       .then((resp) => {
+        console.log('到底成没成功啊')
+        console.log(resp)
         $.sign = JSON.parse(resp)
-        console.log($.sign)
       })
       .catch((err) => console.log(err))
   }
