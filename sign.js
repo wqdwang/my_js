@@ -30,13 +30,14 @@ function sign() {
   const signurlVal = hdl.getdata(signurlKey)
   const signheaderVal = hdl.getdata(signheaderKey)
   const signbodyVal = hdl.getdata(signbodyKey)
-  const url = { url: signurlVal, headers: JSON.parse(signheaderVal), body: signbodyVal }
+  const url = { url: signurlVal, headers: signheaderVal, body: signbodyVal }
   hdl.post(url, (error, response, data) => {
     hdl.log(`${cookieName}, data: ${data}`)
     const title = `${cookieName}`
     let subTitle = ''
     let detail = ''
     const result = JSON.parse(data)
+    console.log(result)
     /*if (result.success == true && result.signInfoVO.todaySigned == true) {
       subTitle = `签到结果: 成功`
       detail = `签到奖励: ${result.customInfo.foodNum}火柴, 连签: ${result.signInfoVO.continueDay}天`
