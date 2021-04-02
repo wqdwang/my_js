@@ -11,7 +11,7 @@
   !(async () => {
     $.CryptoJS = $.isNode() ? require('crypto-js') : CryptoJS
     await sign()
-    showmsg()
+//     showmsg()
   })()
     .catch((e) => $.logErr(e))
     .finally(() => $.done())
@@ -32,7 +32,7 @@
       .post(url)
       .then((resp) => {
         $.sign = JSON.parse(resp.body)
-        console.log(resp)
+        console.log($.sign)
       })
       .catch((err) => console.log(err))
   }
