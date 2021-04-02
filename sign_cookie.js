@@ -6,12 +6,14 @@ let cookieVal = null
 let bodyVal = ``
 
 if ($request.body) {
+  
   cookieVal = $request.headers
   bodyVal = bodyVal ? bodyVal : $request.body
 } else {
   // ([^:]*):\s(.*)\n?
   // cookieObj['$1'] = $request.headers['$1']\n
   console.log('没获取到cookie')
+  chavy.msg('没获取到cookie')
 }
 
 if (cookieVal) {
